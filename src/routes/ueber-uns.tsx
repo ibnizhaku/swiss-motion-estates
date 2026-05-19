@@ -13,10 +13,10 @@ const principles = [
 ];
 
 const team = [
-  ["Dr. A. Brunner", "Geschäftsleitung"],
-  ["M. Steiner", "Bewirtschaftung"],
-  ["L. Caduff", "Stockwerkeigentum"],
-  ["S. Weber", "Vermietung"],
+  ["Dr. A. Brunner", "Geschäftsleitung", "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80&auto=format&fit=crop"],
+  ["M. Steiner", "Bewirtschaftung", "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop"],
+  ["L. Caduff", "Stockwerkeigentum", "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format&fit=crop"],
+  ["S. Weber", "Vermietung", "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80&auto=format&fit=crop"],
 ];
 
 function UeberUns() {
@@ -90,9 +90,11 @@ function UeberUns() {
           </h2>
         </Reveal>
         <Stagger className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#e8e8e6] border border-[#e8e8e6]">
-          {team.map(([n, r]) => (
+          {team.map(([n, r, img]) => (
             <motion.div key={n} variants={itemVariants} className="bg-white p-10">
-              <div className="aspect-[4/5] bg-[#f5f5f3] mb-8" />
+              <div className="aspect-[4/5] bg-[#f5f5f3] mb-8 overflow-hidden">
+                <img src={img} alt={n} className="w-full h-full object-cover" />
+              </div>
               <div className="font-serif text-2xl">{n}</div>
               <div className="mt-2 text-[11px] uppercase tracking-widest-xl text-[#9a9a9a]">{r}</div>
             </motion.div>
