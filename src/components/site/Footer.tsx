@@ -16,7 +16,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="lg:col-span-3 lg:col-start-7 grid gap-2 text-[11px] uppercase tracking-widest-xl">
+          <div className="lg:col-span-3 lg:col-start-7 grid gap-3 text-[12px] uppercase tracking-widest-xl">
             <div className="text-white/40 mb-2">Navigation</div>
             {[
               ["/", "Home"],
