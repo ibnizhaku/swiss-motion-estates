@@ -55,7 +55,7 @@ function UeberUns() {
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80&auto=format&fit=crop"
                   alt="LIVYA office"
-                  className="w-full h-full object-cover grayscale"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </Reveal>

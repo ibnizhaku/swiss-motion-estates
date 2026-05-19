@@ -65,7 +65,7 @@ function Objekte() {
                 <motion.img
                   src={o.img}
                   alt={o.name}
-                  className="w-full h-full object-cover grayscale"
+                  className="w-full h-full object-cover"
                   whileHover={{ scale: 1.06 }}
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                 />
