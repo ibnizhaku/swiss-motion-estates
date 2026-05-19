@@ -122,15 +122,8 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Right contact */}
-          <div className="hidden xl:flex items-center gap-6 text-[11px] uppercase tracking-widest-xl">
-            <a href="mailto:info@livya.ch" className="flex items-center gap-2 magnetic-link">
-              <Mail className="w-3.5 h-3.5" strokeWidth={1.25} /><span>info@livya.ch</span>
-            </a>
-            <a href="tel:+41441234567" className="flex items-center gap-2 magnetic-link">
-              <Phone className="w-3.5 h-3.5" strokeWidth={1.25} /><span>+41 44 123 45 67</span>
-            </a>
-          </div>
+          {/* Right contact removed */}
+          <div className="hidden xl:block w-px" />
 
           {/* Mobile button */}
           <button
