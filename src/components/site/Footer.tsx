@@ -47,22 +47,22 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 grid md:grid-cols-3 gap-4 text-[11px] uppercase tracking-widest-xl text-white/60">
+        <div className="mt-14 pt-8 border-t border-white/10 grid md:grid-cols-3 gap-5 text-[12px] uppercase tracking-widest-xl text-white/60">
           <div className="flex items-start gap-3">
-            <MapPin className="w-3.5 h-3.5 mt-0.5" strokeWidth={1.25} />
+            <MapPin className="w-4 h-4 mt-0.5" strokeWidth={1.25} />
             Bahnhofstrasse 42, 8001 Zürich
           </div>
           <a href="mailto:info@livya.ch" className="flex items-start gap-3 magnetic-link w-fit">
-            <Mail className="w-3.5 h-3.5 mt-0.5" strokeWidth={1.25} /> info@livya.ch
+            <Mail className="w-4 h-4 mt-0.5" strokeWidth={1.25} /> info@livya.ch
           </a>
           <a href="tel:+41441234567" className="flex items-start gap-3 magnetic-link w-fit">
-            <Phone className="w-3.5 h-3.5 mt-0.5" strokeWidth={1.25} /> +41 44 123 45 67
+            <Phone className="w-4 h-4 mt-0.5" strokeWidth={1.25} /> +41 44 123 45 67
           </a>
         </div>
 
-        <div className="mt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-          <div className="font-serif text-2xl">LIVYA</div>
-          <div className="text-[10px] uppercase tracking-widest-xl text-white/40">
+        <div className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div className="font-serif text-3xl">LIVYA</div>
+          <div className="text-[11px] uppercase tracking-widest-xl text-white/40">
             © {new Date().getFullYear()} Livya Immobilienverwaltung GmbH
           </div>
         </div>
