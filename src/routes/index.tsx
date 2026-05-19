@@ -203,7 +203,7 @@ function Home() {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full h-full object-cover grayscale"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </Reveal>
