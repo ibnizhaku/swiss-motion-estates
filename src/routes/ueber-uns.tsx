@@ -90,9 +90,11 @@ function UeberUns() {
           </h2>
         </Reveal>
         <Stagger className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#e8e8e6] border border-[#e8e8e6]">
-          {team.map(([n, r]) => (
+          {team.map(([n, r, img]) => (
             <motion.div key={n} variants={itemVariants} className="bg-white p-10">
-              <div className="aspect-[4/5] bg-[#f5f5f3] mb-8" />
+              <div className="aspect-[4/5] bg-[#f5f5f3] mb-8 overflow-hidden">
+                <img src={img} alt={n} className="w-full h-full object-cover" />
+              </div>
               <div className="font-serif text-2xl">{n}</div>
               <div className="mt-2 text-[11px] uppercase tracking-widest-xl text-[#9a9a9a]">{r}</div>
             </motion.div>
