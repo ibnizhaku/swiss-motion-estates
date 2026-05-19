@@ -4,13 +4,13 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-white">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-8 lg:px-16 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-8 lg:px-16 py-14 lg:py-16">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-8">
           <div className="lg:col-span-5">
-            <h2 className="font-serif text-5xl lg:text-7xl leading-[1.05] text-balance">
+            <h2 className="font-serif text-3xl lg:text-4xl leading-[1.1] text-balance">
               Diskrete Verwaltung. <span className="italic text-white/60">Schweizer Präzision.</span>
             </h2>
-            <p className="mt-8 text-white/60 max-w-md">
+            <p className="mt-4 text-sm text-white/60 max-w-md">
               Seit über zwei Jahrzehnten betreuen wir Eigentümer und Mieter mit
               kompromissloser Sorgfalt im Herzen der Schweiz.
             </p>
