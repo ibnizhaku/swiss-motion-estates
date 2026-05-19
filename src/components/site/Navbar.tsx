@@ -13,11 +13,13 @@ import {
 import { useEffect, useState } from "react";
 
 const mainLinks = [
+  { to: "/", label: "Startseite" },
   { to: "/ueber-uns", label: "Über uns" },
   { to: "/eigentuemer", label: "Eigentümer" },
   { to: "/objekte", label: "Objekte" },
   { to: "/kontakt", label: "Kontakt" },
 ];
+
 
 const mieterLinks = [
   { to: "/schadenmeldung", label: "Schadenmeldung" },
@@ -80,7 +82,7 @@ export function Navbar() {
 
           {/* Center links */}
           <nav className="hidden lg:flex items-center gap-10 text-[12px] uppercase tracking-widest-xl">
-            {mainLinks.slice(0, 2).map((l) => (
+            {mainLinks.slice(0, 3).map((l) => (
               <NavItem key={l.to} to={l.to} label={l.label} active={location.pathname === l.to} />
             ))}
             <div
@@ -115,7 +117,7 @@ export function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-            {mainLinks.slice(2).map((l) => (
+            {mainLinks.slice(3).map((l) => (
               <NavItem key={l.to} to={l.to} label={l.label} active={location.pathname === l.to} />
             ))}
           </nav>
