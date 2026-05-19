@@ -94,8 +94,8 @@
   }
   .magnetic-link {
     position: relative;
-    display: inline-block;
   }
+
   .magnetic-link::after {
     content: "";
     position: absolute;
