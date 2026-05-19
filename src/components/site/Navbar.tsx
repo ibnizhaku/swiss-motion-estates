@@ -13,11 +13,13 @@ import {
 import { useEffect, useState } from "react";
 
 const mainLinks = [
+  { to: "/", label: "Startseite" },
   { to: "/ueber-uns", label: "Über uns" },
   { to: "/eigentuemer", label: "Eigentümer" },
   { to: "/objekte", label: "Objekte" },
   { to: "/kontakt", label: "Kontakt" },
 ];
+
 
 const mieterLinks = [
   { to: "/schadenmeldung", label: "Schadenmeldung" },
