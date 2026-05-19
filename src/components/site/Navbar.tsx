@@ -82,7 +82,7 @@ export function Navbar() {
 
           {/* Center links */}
           <nav className="hidden lg:flex items-center gap-10 text-[12px] uppercase tracking-widest-xl">
-            {mainLinks.slice(0, 2).map((l) => (
+            {mainLinks.slice(0, 3).map((l) => (
               <NavItem key={l.to} to={l.to} label={l.label} active={location.pathname === l.to} />
             ))}
             <div
