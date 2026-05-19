@@ -173,20 +173,22 @@ function Home() {
       </Section>
 
       {/* STATS — scroll storytelling */}
-      <Section dark className="!py-12 lg:!py-20">
-        <Stagger className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
-          {stats.map(([n, l]) => (
-            <motion.div
-              key={l}
-              variants={itemVariants}
-              className="bg-[#1a1a1a] px-6 py-8 lg:py-12"
-            >
-              <div className="font-serif text-4xl lg:text-5xl">{n}</div>
-              <div className="mt-3 text-[11px] uppercase tracking-widest-xl text-white/60">{l}</div>
-            </motion.div>
-          ))}
-        </Stagger>
-      </Section>
+      <section className="bg-[#1a1a1a] text-white">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-8 lg:px-16 py-12 lg:py-20">
+          <Stagger className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
+            {stats.map(([n, l]) => (
+              <motion.div
+                key={l}
+                variants={itemVariants}
+                className="bg-[#1a1a1a] px-6 py-8 lg:py-12"
+              >
+                <div className="font-serif text-4xl lg:text-5xl">{n}</div>
+                <div className="mt-3 text-[11px] uppercase tracking-widest-xl text-white/60">{l}</div>
+              </motion.div>
+            ))}
+          </Stagger>
+        </div>
+      </section>
 
       {/* FEATURED OBJECT */}
       <Section alt>
