@@ -174,10 +174,10 @@ export function Navbar() {
               </nav>
               <div className="px-8 py-8 border-t border-[#e8e8e6] flex flex-col gap-3 text-[12px] uppercase tracking-widest-xl">
                 <a href="mailto:info@livya.ch" className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" strokeWidth={1.25} /> info@livya.ch
+                  <Mail className="w-4 h-4" strokeWidth={1.25} /><span>info@livya.ch</span>
                 </a>
                 <a href="tel:+41441234567" className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" strokeWidth={1.25} /> +41 44 123 45 67
+                  <Phone className="w-4 h-4" strokeWidth={1.25} /><span>+41 44 123 45 67</span>
                 </a>
               </div>
             </div>
