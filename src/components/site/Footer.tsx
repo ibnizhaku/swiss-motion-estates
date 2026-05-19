@@ -31,7 +31,7 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="lg:col-span-3 grid gap-2 text-[11px] uppercase tracking-widest-xl">
+          <div className="lg:col-span-3 grid gap-3 text-[12px] uppercase tracking-widest-xl">
             <div className="text-white/40 mb-2">Mieter</div>
             {[
               ["/schadenmeldung", "Schadenmeldung"],
