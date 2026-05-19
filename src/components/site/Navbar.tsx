@@ -117,7 +117,7 @@ export function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-            {mainLinks.slice(2).map((l) => (
+            {mainLinks.slice(3).map((l) => (
               <NavItem key={l.to} to={l.to} label={l.label} active={location.pathname === l.to} />
             ))}
           </nav>
