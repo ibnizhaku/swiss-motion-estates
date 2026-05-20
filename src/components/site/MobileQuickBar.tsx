@@ -3,8 +3,8 @@ import { Building2, Mail, Phone } from "lucide-react";
 
 export function MobileQuickBar() {
   return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#1a1a1a] text-white border-t border-white/10">
-      <div className="grid grid-cols-3 text-[10px] uppercase tracking-widest-xl">
+    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 glass-strong border-t border-white/10">
+      <div className="grid grid-cols-3 text-[10px] uppercase tracking-widest-xl text-white/90">
         <a href="tel:+41441234567" className="flex items-center justify-center gap-2 py-4 min-h-[56px]">
           <Phone className="w-4 h-4" strokeWidth={1.25} /> Call
         </a>
