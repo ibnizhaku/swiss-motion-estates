@@ -1,6 +1,15 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Mail, Menu, Phone, X } from "lucide-react";
+import {
+  AlertCircle,
+  ChevronDown,
+  FileText,
+  Mail,
+  Menu,
+  Phone,
+  PenTool,
+  X,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const mainLinks = [
@@ -10,6 +19,7 @@ const mainLinks = [
   { to: "/objekte", label: "Objekte" },
   { to: "/kontakt", label: "Kontakt" },
 ];
+
 
 const mieterLinks = [
   { to: "/schadenmeldung", label: "Schadenmeldung" },
@@ -30,30 +40,33 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => setOpen(false), [location.pathname]);
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   return (
     <>
+
+      {/* Main nav */}
       <motion.header
         initial={false}
         animate={{
-          backgroundColor: scrolled ? "rgba(5,6,15,0.65)" : "rgba(5,6,15,0.0)",
-          backdropFilter: scrolled ? "blur(20px) saturate(160%)" : "blur(0px)",
-          borderColor: scrolled ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0)",
+          backgroundColor: scrolled ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,1)",
+          backdropFilter: scrolled ? "blur(18px)" : "blur(0px)",
         }}
-        transition={{ duration: 0.5 }}
-        className="sticky top-0 z-50 border-b"
+        transition={{ duration: 0.4 }}
+        className="sticky top-0 z-50 border-b border-[#e8e8e6]"
       >
         <div className="max-w-[1600px] mx-auto px-6 md:px-8 lg:px-16 flex items-center justify-between h-20 lg:h-24">
+          {/* Brand */}
           <Link to="/" className="flex flex-col leading-none">
-            <span className="font-serif text-3xl lg:text-4xl tracking-tight text-gradient">
-              LIVYA
-            </span>
-            <span className="text-[10px] uppercase tracking-widest-xl text-white/40 mt-1">
+            <span className="font-serif text-3xl lg:text-4xl tracking-tight">LIVYA</span>
+            <span className="text-[10px] uppercase tracking-widest-xl text-[#9a9a9a] mt-1">
               Immobilienverwaltung GmbH
             </span>
           </Link>
 
+          {/* Center links */}
           <nav className="hidden lg:flex items-center gap-10 text-[12px] uppercase tracking-widest-xl">
             {mainLinks.slice(0, 3).map((l) => (
               <NavItem key={l.to} to={l.to} label={l.label} active={location.pathname === l.to} />
@@ -63,7 +76,7 @@ export function Navbar() {
               onMouseEnter={() => setMieterOpen(true)}
               onMouseLeave={() => setMieterOpen(false)}
             >
-              <button className="flex items-center gap-1.5 text-white/80 hover:text-white transition">
+              <button className="flex items-center gap-1.5 text-[#1a1a1a] hover:opacity-60 transition">
                 Mieter <ChevronDown className="w-3 h-3" strokeWidth={1.5} />
               </button>
               <AnimatePresence>
@@ -75,12 +88,12 @@ export function Navbar() {
                     transition={{ duration: 0.25 }}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-4"
                   >
-                    <div className="glass-strong min-w-[220px] py-2">
+                    <div className="bg-white border border-[#e8e8e6] min-w-[220px] py-2">
                       {mieterLinks.map((l) => (
                         <Link
                           key={l.to}
                           to={l.to as any}
-                          className="block px-5 py-3 text-[11px] uppercase tracking-widest-xl text-white/80 hover:text-white hover:bg-white/5 transition"
+                          className="block px-5 py-3 text-[11px] uppercase tracking-widest-xl hover:bg-[#f5f5f3] transition"
                         >
                           {l.label}
                         </Link>
@@ -95,11 +108,13 @@ export function Navbar() {
             ))}
           </nav>
 
+          {/* Right contact removed */}
           <div className="hidden xl:block w-px" />
 
+          {/* Mobile button */}
           <button
             onClick={() => setOpen(true)}
-            className="lg:hidden p-2 -mr-2 text-white"
+            className="lg:hidden p-2 -mr-2"
             aria-label="Open menu"
           >
             <Menu className="w-6 h-6" strokeWidth={1.25} />
@@ -107,6 +122,7 @@ export function Navbar() {
         </div>
       </motion.header>
 
+      {/* Mobile overlay */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -114,13 +130,12 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-[100] bg-[#05060f]/95 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] bg-white/95 backdrop-blur-xl"
           >
-            <div className="aurora opacity-40" />
-            <div className="relative flex flex-col h-full">
-              <div className="flex items-center justify-between px-6 h-20 border-b border-white/10">
-                <span className="font-serif text-3xl text-gradient">LIVYA</span>
-                <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2 -mr-2 text-white">
+            <div className="flex flex-col h-full">
+              <div className="flex items-center justify-between px-6 h-20 border-b border-[#e8e8e6]">
+                <span className="font-serif text-3xl">LIVYA</span>
+                <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2 -mr-2">
                   <X className="w-6 h-6" strokeWidth={1.25} />
                 </button>
               </div>
@@ -132,18 +147,18 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 + i * 0.05, duration: 0.5 }}
                   >
-                    <Link to={l.to as any} className="font-serif text-4xl text-white">
+                    <Link to={l.to as any} className="font-serif text-4xl">
                       {l.label}
                     </Link>
                   </motion.div>
                 ))}
               </nav>
-              <div className="px-8 py-8 border-t border-white/10 flex flex-col gap-3 text-[12px] uppercase tracking-widest-xl text-white/70">
+              <div className="px-8 py-8 border-t border-[#e8e8e6] flex flex-col gap-3 text-[12px] uppercase tracking-widest-xl">
                 <a href="mailto:info@livya.ch" className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" strokeWidth={1.25} /> info@livya.ch
+                  <Mail className="w-4 h-4" strokeWidth={1.25} /><span>info@livya.ch</span>
                 </a>
                 <a href="tel:+41441234567" className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" strokeWidth={1.25} /> +41 44 123 45 67
+                  <Phone className="w-4 h-4" strokeWidth={1.25} /><span>+41 44 123 45 67</span>
                 </a>
               </div>
             </div>
@@ -156,12 +171,12 @@ export function Navbar() {
 
 function NavItem({ to, label, active }: { to: string; label: string; active: boolean }) {
   return (
-    <Link to={to as any} className="relative magnetic-link text-white/80 hover:text-white transition">
+    <Link to={to as any} className="relative magnetic-link text-[#1a1a1a]">
       {label}
       {active && (
         <motion.span
           layoutId="active-nav"
-          className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-[#7c5cff] to-[#5ce7ff]"
+          className="absolute -bottom-1 left-0 right-0 h-px bg-[#1a1a1a]"
         />
       )}
     </Link>
