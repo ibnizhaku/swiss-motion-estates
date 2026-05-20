@@ -46,20 +46,6 @@ export function Navbar() {
 
   return (
     <>
-      {/* Top utility row */}
-      <div className="hidden md:block bg-[#1a1a1a] text-white text-[11px] uppercase tracking-widest-xl">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16 flex justify-end items-center gap-8 h-10">
-          <Link to="/schadenmeldung" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition">
-            <PenTool className="w-3 h-3" strokeWidth={1.25} /> Schadenmeldung
-          </Link>
-          <Link to="/mieter-dokumente" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition">
-            <FileText className="w-3 h-3" strokeWidth={1.25} /> Dokumente
-          </Link>
-          <Link to="/notfall" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition">
-            <AlertCircle className="w-3 h-3" strokeWidth={1.25} /> Notfall
-          </Link>
-        </div>
-      </div>
 
       {/* Main nav */}
       <motion.header
