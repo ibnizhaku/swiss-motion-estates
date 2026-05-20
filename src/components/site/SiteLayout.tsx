@@ -4,15 +4,11 @@ import { Navbar } from "./Navbar";
 import { MobileQuickBar } from "./MobileQuickBar";
 import { SmoothScroll } from "./SmoothScroll";
 import { PageTransition } from "./PageTransition";
-import { CustomCursor } from "./CustomCursor";
-import { ScrollAnimations } from "./ScrollAnimations";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="grain min-h-screen flex flex-col bg-white text-[#1a1a1a]">
       <SmoothScroll />
-      <CustomCursor />
-      <ScrollAnimations />
       <Navbar />
       <div className="flex-1 pb-16 lg:pb-0">
         <PageTransition>{children}</PageTransition>
