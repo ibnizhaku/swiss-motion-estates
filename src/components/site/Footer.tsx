@@ -53,10 +53,12 @@ export function Footer() {
             Bahnhofstrasse 42, 8001 Zürich
           </div>
           <a href="mailto:info@livya.ch" className="flex items-start gap-3 magnetic-link w-fit">
-            <Mail className="w-4 h-4 mt-0.5" strokeWidth={1.25} /> info@livya.ch
+            <Mail className="w-4 h-4 mt-0.5" strokeWidth={1.25} />
+            <span>info@livya.ch</span>
           </a>
           <a href="tel:+41441234567" className="flex items-start gap-3 magnetic-link w-fit">
-            <Phone className="w-4 h-4 mt-0.5" strokeWidth={1.25} /> +41 44 123 45 67
+            <Phone className="w-4 h-4 mt-0.5" strokeWidth={1.25} />
+            <span>+41 44 123 45 67</span>
           </a>
         </div>
 
